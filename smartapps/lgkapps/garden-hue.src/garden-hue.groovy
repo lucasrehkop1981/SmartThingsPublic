@@ -193,23 +193,23 @@ private def initialize() {
     switch (settings.cycletime)
     {
      case "1":
-     log.debug "Switching color every second."
+     log.debug "Switching color every 1 seconds."
      schedule("1 * * * * ?",changeHandler)
      break;
 
      case "5":
      log.debug "Switching color every 5 seconds."
-     runEvery5Minutes(changeHandler)
+     runEveryseconds(changeHandler)
      break;
       
      case "10":
-     log.debug "Switching color every 10 minutes."
-     runEvery10Minutes(changeHandler)
+     log.debug "Switching color every 10 seconds."
+     runEvery10seconds(changeHandler)
      break;
     
      case "15":
-     log.debug "Switching color every 15 minutes."
-     runEvery15Minutes(changeHandler)
+     log.debug "Switching color every 15 seconds."
+     runEvery15seconds(changeHandler)
      break;
     
      case "30":
