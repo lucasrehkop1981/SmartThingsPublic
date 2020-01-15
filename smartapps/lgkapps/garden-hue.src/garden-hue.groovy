@@ -54,11 +54,11 @@ preferences {
 
 	section("Choose cycle time between color changes? ") {
             input "cycletime", "enum", title: "Cycle time in minutes?" , options: [
-                                ".1",
-                                ".2",
-				".3", 
-				".4", 
-				".5", 
+                                "1",
+                                "2",
+				"3", 
+				"4", 
+				"5", 
 				"1 hour", 
 				"3 hours"
 			], required: true, defaultValue: "30"
@@ -193,12 +193,12 @@ private def initialize() {
     switch (settings.cycletime)
     {
      case "1":
-     log.debug "Switching color every minute."
+     log.debug "Switching color every second."
      schedule("1 * * * * ?",changeHandler)
      break;
 
      case "5":
-     log.debug "Switching color every 5 minutes."
+     log.debug "Switching color every 5 seconds."
      runEvery5Minutes(changeHandler)
      break;
       
