@@ -54,11 +54,11 @@ preferences {
 
 	section("Choose cycle time between color changes? ") {
             input "cycletime", "enum", title: "Cycle time in minutes?" , options: [
-                                "1",
-                                "5",
-				"10", 
-				"15", 
-				"30", 
+                                ".1",
+                                ".2",
+				".3", 
+				".4", 
+				".5", 
 				"1 hour", 
 				"3 hours"
 			], required: true, defaultValue: "30"
